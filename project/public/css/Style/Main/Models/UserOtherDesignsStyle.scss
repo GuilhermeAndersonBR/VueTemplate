@@ -1,0 +1,52 @@
+@import '/css/generalStyle.scss';
+
+/*----------------------------------------------------------------------*/
+
+.other-designs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin: 2em 0;
+
+    a{
+    padding: 1px;
+
+        img{
+            min-height: 12em;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            object-fit: cover;
+            filter: grayscale(0.25);
+            transition: 0.2s linear;
+        }
+
+        &:hover{
+            z-index: 5;
+        }
+
+        &:hover img{
+            filter: grayscale(0);
+            transform: scale(105%);
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .other-designs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin: 2em 0;
+    }
+}
+
+
+@media (max-width: 660px){  
+    .other-designs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 2em 0;
+    }
+}
